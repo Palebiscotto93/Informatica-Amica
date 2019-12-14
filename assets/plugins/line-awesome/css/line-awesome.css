@@ -1,17 +1,17 @@
 /*!
- *  Line Awesome 1.1.0 by @icons_8 - https://icons8.com/line-awesome
- *  License - https://icons8.com/good-boy-license/ (Font: SIL OFL 1.1, CSS: MIT License)
+ *  Line Awesome 1.1.0 by @icons_8 - httpss://icons8.com/line-awesome
+ *  License - httpss://icons8.com/good-boy-license/ (Font: SIL OFL 1.1, CSS: MIT License)
  *
- * Made with love by Icons8 [ https://icons8.com/ ] using FontCustom [ https://github.com/FontCustom/fontcustom ]
+ * Made with love by Icons8 [ httpss://icons8.com/ ] using FontCustom [ httpss://github.com/FontCustom/fontcustom ]
  *
  * Contacts:
- *    [ https://icons8.com/contact ]
+ *    [ httpss://icons8.com/contact ]
  *
  * Follow Icon8 on
- *    Twitter [ https://twitter.com/icons_8 ]
- *    Facebook [ https://www.facebook.com/Icons8 ]
- *    Google+ [ https://plus.google.com/+Icons8 ]
- *    GitHub [ https://github.com/icons8 ]
+ *    Twitter [ httpss://twitter.com/icons_8 ]
+ *    Facebook [ httpss://www.facebook.com/Icons8 ]
+ *    Google+ [ httpss://plus.google.com/+Icons8 ]
+ *    GitHub [ httpss://github.com/icons8 ]
  */
 
 @font-face {
@@ -33,7 +33,7 @@
   }
 }
 
-/* Thanks to http://fontawesome.io @fontawesome and @davegandy */
+/* Thanks to https://fontawesome.io @fontawesome and @davegandy */
 .la {
     display: inline-block;
     font: normal normal normal 16px/1 "LineAwesome";
@@ -187,7 +187,7 @@
 .la-inverse {
     color: #ffffff;
 }
-/* Thanks to http://fontawesome.io @fontawesome and @davegandy */
+/* Thanks to https://fontawesome.io @fontawesome and @davegandy */
 
 .la-500px:before { content: "\f100"; }
 .la-adjust:before { content: "\f101"; }

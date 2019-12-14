@@ -30,10 +30,10 @@ if(!Array.isArray) {
   };
 };/**
  * @license wysihtml5x v0.4.13
- * https://github.com/Edicy/wysihtml5
+ * httpss://github.com/Edicy/wysihtml5
  *
- * Author: Christopher Blum (https://github.com/tiff)
- * Secondary author of extended features: Oliver Pulges (https://github.com/pulges)
+ * Author: Christopher Blum (httpss://github.com/tiff)
+ * Secondary author of extended features: Oliver Pulges (httpss://github.com/pulges)
  *
  * Copyright (C) 2012 XING AG
  * Licensed under the MIT license (MIT)
@@ -66,7 +66,7 @@ var wysihtml5 = {
 };
 ;/**
  * Rangy, a cross-browser JavaScript range and selection library
- * http://code.google.com/p/rangy/
+ * https://code.google.com/p/rangy/
  *
  * Copyright 2014, Tim Down
  * Licensed under the MIT license.
@@ -112,7 +112,7 @@ var wysihtml5 = {
     /*----------------------------------------------------------------------------------------------------------------*/
 
     // Trio of functions taken from Peter Michaux's article:
-    // http://peter.michaux.ca/articles/feature-detection-state-of-the-art-browser-scripting
+    // https://peter.michaux.ca/articles/feature-detection-state-of-the-art-browser-scripting
     function isHostMethod(o, p) {
         var t = typeof o[p];
         return t == FUNCTION || (!!(t == OBJECT && o[p])) || t == "unknown";
@@ -563,7 +563,7 @@ var wysihtml5 = {
         // Opera 11 puts HTML elements in the null namespace, it seems, and IE 7 has undefined namespaceURI
         function isHtmlNamespace(node) {
             var ns;
-            return typeof node.namespaceURI == UNDEF || ((ns = node.namespaceURI) === null || ns == "http://www.w3.org/1999/xhtml");
+            return typeof node.namespaceURI == UNDEF || ((ns = node.namespaceURI) === null || ns == "https://www.w3.org/1999/xhtml");
         }
 
         function parentElement(node) {
@@ -766,7 +766,7 @@ var wysihtml5 = {
         }
 
         function comparePoints(nodeA, offsetA, nodeB, offsetB) {
-            // See http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-Comparing
+            // See https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-Comparing
             var nodeC, root, childA, childB, n;
             if (nodeA == nodeB) {
                 // Case 1: nodes are the same
@@ -1177,7 +1177,7 @@ var wysihtml5 = {
 
         /*----------------------------------------------------------------------------------------------------------------*/
 
-        // RangeIterator code partially borrows from IERange by Tim Ryan (http://github.com/timcameronryan/IERange)
+        // RangeIterator code partially borrows from IERange by Tim Ryan (https://github.com/timcameronryan/IERange)
 
         function RangeIterator(range, clonePartiallySelectedTextNodes) {
             this.range = range;
@@ -1394,7 +1394,7 @@ var wysihtml5 = {
 
             // Implementation as per HTML parsing spec, trusting in the browser's implementation of innerHTML. See
             // discussion and base code for this implementation at issue 67.
-            // Spec: http://html5.org/specs/dom-parsing.html#extensions-to-the-range-interface
+            // Spec: https://html5.org/specs/dom-parsing.html#extensions-to-the-range-interface
             // Thanks to Aleks Williams.
             function(fragmentStr) {
                 // "Let node the context object's start's node."
@@ -2358,7 +2358,7 @@ var wysihtml5 = {
                 /*--------------------------------------------------------------------------------------------------------*/
 
                 // Test for and correct WebKit bug that has the behaviour of compareBoundaryPoints round the wrong way for
-                // constants START_TO_END and END_TO_START: https://bugs.webkit.org/show_bug.cgi?id=20738
+                // constants START_TO_END and END_TO_START: httpss://bugs.webkit.org/show_bug.cgi?id=20738
 
                 range.selectNodeContents(testTextNode);
                 range.setEnd(testTextNode, 3);
@@ -2480,7 +2480,7 @@ var wysihtml5 = {
             };
 
             // Gets the boundary of a TextRange expressed as a node and an offset within that node. This function started
-            // out as an improved version of code found in Tim Cameron Ryan's IERange (http://code.google.com/p/ierange/)
+            // out as an improved version of code found in Tim Cameron Ryan's IERange (https://code.google.com/p/ierange/)
             // but has grown, fixing problems with line breaks in preformatted text, adding workaround for IE TextRange
             // bugs, handling for inputs and images, plus optimizations.
             var getTextRangeBoundaryPosition = function(textRange, wholeRangeContainerElement, isStart, isCollapsed, startInfo) {
@@ -2496,7 +2496,7 @@ var wysihtml5 = {
 
 
                 // Deal with nodes that cannot "contain rich HTML markup". In practice, this means form inputs, images and
-                // similar. See http://msdn.microsoft.com/en-us/library/aa703950%28VS.85%29.aspx
+                // similar. See https://msdn.microsoft.com/en-us/library/aa703950%28VS.85%29.aspx
                 if (!containerElement.canHaveHTML) {
                     var pos = new DomPosition(containerElement.parentNode, dom.getNodeIndex(containerElement));
                     return {
@@ -2511,7 +2511,7 @@ var wysihtml5 = {
                 var workingNode = dom.getDocument(containerElement).createElement("span");
 
                 // Workaround for HTML5 Shiv's insane violation of document.createElement(). See Rangy issue 104 and HTML5
-                // Shiv issue 64: https://github.com/aFarkas/html5shiv/issues/64
+                // Shiv issue 64: httpss://github.com/aFarkas/html5shiv/issues/64
                 if (workingNode.parentNode) {
                     workingNode.parentNode.removeChild(workingNode);
                 }
@@ -2635,7 +2635,7 @@ var wysihtml5 = {
 
             // Returns a TextRange representing the boundary of a TextRange expressed as a node and an offset within that
             // node. This function started out as an optimized version of code found in Tim Cameron Ryan's IERange
-            // (http://code.google.com/p/ierange/)
+            // (https://code.google.com/p/ierange/)
             var createBoundaryTextRange = function(boundaryPosition, isStart) {
                 var boundaryNode, boundaryParent, boundaryOffset = boundaryPosition.offset;
                 var doc = dom.getDocument(boundaryPosition.node);
@@ -2659,7 +2659,7 @@ var wysihtml5 = {
                 workingNode.innerHTML = "&#feff;";
 
                 // insertBefore is supposed to work like appendChild if the second parameter is null. However, a bug report
-                // for IERange suggests that it can crash the browser: http://code.google.com/p/ierange/issues/detail?id=12
+                // for IERange suggests that it can crash the browser: https://code.google.com/p/ierange/issues/detail?id=12
                 if (boundaryNode) {
                     boundaryParent.insertBefore(workingNode, boundaryNode);
                 } else {
@@ -2795,7 +2795,7 @@ var wysihtml5 = {
     /*----------------------------------------------------------------------------------------------------------------*/
 
     // This module creates a selection object wrapper that conforms as closely as possible to the Selection specification
-    // in the HTML Editing spec (http://dvcs.w3.org/hg/editing/raw-file/tip/editing.html#selections)
+    // in the HTML Editing spec (https://dvcs.w3.org/hg/editing/raw-file/tip/editing.html#selections)
     api.createCoreModule("WrappedSelection", ["DomRange", "WrappedRange"], function(api, module) {
         api.config.checkSelectionRanges = true;
 
@@ -2954,7 +2954,7 @@ var wysihtml5 = {
                         // console error of "Discontiguous selection is not supported." that cannot be suppressed. There's
                         // nothing we can do about this while retaining the feature test so we have to resort to a browser
                         // sniff. I'm not happy about it. See
-                        // https://code.google.com/p/chromium/issues/detail?id=399791
+                        // httpss://code.google.com/p/chromium/issues/detail?id=399791
                         var chromeMatch = window.navigator.appVersion.match(/Chrome\/(.*?) /);
                         if (chromeMatch && parseInt(chromeMatch[1]) >= 36) {
                             selectionSupportsMultipleRanges = false;
@@ -3802,7 +3802,7 @@ var wysihtml5 = {
  * Saves and restores user selections using marker invisible elements in the DOM.
  *
  * Part of Rangy, a cross-browser JavaScript range and selection library
- * http://code.google.com/p/rangy/
+ * https://code.google.com/p/rangy/
  *
  * Depends on Rangy core.
  *
@@ -4049,7 +4049,7 @@ var wysihtml5 = {
 }, this);;/*
 	Base.js, version 1.1a
 	Copyright 2006-2010, Dean Edwards
-	License: http://www.opensource.org/licenses/mit-license.php
+	License: https://www.opensource.org/licenses/mit-license.php
 */
 
 var Base = function() {
@@ -4271,8 +4271,8 @@ wysihtml5.browser = (function() {
      * Whether the browser supports sandboxed iframes
      * Currently only IE 6+ offers such feature <iframe security="restricted">
      *
-     * http://msdn.microsoft.com/en-us/library/ms534622(v=vs.85).aspx
-     * http://blogs.msdn.com/b/ie/archive/2008/01/18/using-frames-more-securely.aspx
+     * https://msdn.microsoft.com/en-us/library/ms534622(v=vs.85).aspx
+     * https://blogs.msdn.com/b/ie/archive/2008/01/18/using-frames-more-securely.aspx
      *
      * HTML5 sandboxed iframes are still buggy and their DOM is not reachable from the outside (except when using postMessage)
      */
@@ -4402,13 +4402,13 @@ wysihtml5.browser = (function() {
 
     /**
      * IE: URLs starting with:
-     *    www., http://, https://, ftp://, gopher://, mailto:, new:, snews:, telnet:, wasis:, file://,
+     *    www., https://, httpss://, ftp://, gopher://, mailto:, new:, snews:, telnet:, wasis:, file://,
      *    nntp://, newsrc:, ldap://, ldaps://, outlook:, mic:// and url:
      * will automatically be auto-linked when either the user inserts them via copy&paste or presses the
      * space bar when the caret is directly after such an url.
      * This behavior cannot easily be avoided in IE < 9 since the logic is hardcoded in the mshtml.dll
      * (related blog post on msdn
-     * http://blogs.msdn.com/b/ieinternals/archive/2009/09/17/prevent-automatic-hyperlinking-in-contenteditable-html.aspx).
+     * https://blogs.msdn.com/b/ieinternals/archive/2009/09/17/prevent-automatic-hyperlinking-in-contenteditable-html.aspx).
      */
     doesAutoLinkingInContentEditable: function() {
       return isIE();
@@ -4480,7 +4480,7 @@ wysihtml5.browser = (function() {
 
     /**
      * As of now (19.04.2011) only supported by Firefox 4 and Chrome
-     * See https://developer.mozilla.org/en/DOM/Selection/modify
+     * See httpss://developer.mozilla.org/en/DOM/Selection/modify
      */
     supportsSelectionModify: function() {
       return "getSelection" in window && "modify" in window.getSelection();
@@ -4495,7 +4495,7 @@ wysihtml5.browser = (function() {
 
     /**
      * Whether the browser supports the speech api on the given element
-     * See http://mikepultz.com/2011/03/accessing-google-speech-api-chrome-11/
+     * See https://mikepultz.com/2011/03/accessing-google-speech-api-chrome-11/
      *
      * @example
      *    var input = document.createElement("input");
@@ -4509,12 +4509,12 @@ wysihtml5.browser = (function() {
     },
 
     /**
-     * IE9 crashes when setting a getter via Object.defineProperty on XMLHttpRequest or XDomainRequest
-     * See https://connect.microsoft.com/ie/feedback/details/650112
-     * or try the POC http://tifftiff.de/ie9_crash/
+     * IE9 crashes when setting a getter via Object.defineProperty on XMLhttpsRequest or XDomainRequest
+     * See httpss://connect.microsoft.com/ie/feedback/details/650112
+     * or try the POC https://tifftiff.de/ie9_crash/
      */
     crashesWhenDefineProperty: function(property) {
-      return isIE(9) && (property === "XMLHttpRequest" || property === "XDomainRequest");
+      return isIE(9) && (property === "XMLhttpsRequest" || property === "XDomainRequest");
     },
 
     /**
@@ -4847,7 +4847,7 @@ wysihtml5.browser = (function() {
 })();
 ;/**
  * Find urls in descendant text nodes of an element and auto-links them
- * Inspired by http://james.padolsey.com/javascript/find-and-replace-text-with-javascript/
+ * Inspired by https://james.padolsey.com/javascript/find-and-replace-text-with-javascript/
  *
  * @param {Element} element Container element in which to search for urls
  *
@@ -4865,12 +4865,12 @@ wysihtml5.browser = (function() {
        *    /(\S+\.{1}[^\s\,\.\!]+)/g
        *
        * revision 2:
-       *    /(\b(((https?|ftp):\/\/)|(www\.))[-A-Z0-9+&@#\/%?=~_|!:,.;\[\]]*[-A-Z0-9+&@#\/%=~_|])/gim
+       *    /(\b(((httpss?|ftp):\/\/)|(www\.))[-A-Z0-9+&@#\/%?=~_|!:,.;\[\]]*[-A-Z0-9+&@#\/%=~_|])/gim
        *
        * put this in the beginning if you don't wan't to match within a word
        *    (^|[\>\(\{\[\s\>])
        */
-      URL_REG_EXP           = /((https?:\/\/|www\.)[^\s<]{3,})/gi,
+      URL_REG_EXP           = /((httpss?:\/\/|www\.)[^\s<]{3,})/gi,
       TRAILING_CHAR_REG_EXP = /([^\w\/\-](,?))$/i,
       MAX_DISPLAY_LENGTH    = 100,
       BRACKETS              = { ")": "(", "]": "[", "}": "{" };
@@ -4906,9 +4906,9 @@ wysihtml5.browser = (function() {
       if (url.length > MAX_DISPLAY_LENGTH) {
         displayUrl = displayUrl.substr(0, MAX_DISPLAY_LENGTH) + "...";
       }
-      // Add http prefix if necessary
+      // Add https prefix if necessary
       if (realUrl.substr(0, 4) === "www.") {
-        realUrl = "http://" + realUrl;
+        realUrl = "https://" + realUrl;
       }
 
       return '<a href="' + realUrl + '">' + displayUrl + '</a>' + punctuation;
@@ -5038,7 +5038,7 @@ wysihtml5.browser = (function() {
     };
   } else if (documentElement.compareDocumentPosition) {
     return function(container, element) {
-      // https://developer.mozilla.org/en/DOM/Node.compareDocumentPosition
+      // httpss://developer.mozilla.org/en/DOM/Node.compareDocumentPosition
       return !!(container.compareDocumentPosition(element) & 16);
     };
   }
@@ -5210,7 +5210,7 @@ wysihtml5.dom.copyAttributes = function(attributesToCopy) {
    * So if an element has "width: 200px; -moz-box-sizing: border-box; border: 1px;" then
    * its computed css width will be 198px
    *
-   * See https://bugzilla.mozilla.org/show_bug.cgi?id=520992
+   * See httpss://bugzilla.mozilla.org/show_bug.cgi?id=520992
    */
   var BOX_SIZING_PROPERTIES = ["-webkit-box-sizing", "-moz-box-sizing", "-ms-box-sizing", "box-sizing"];
 
@@ -5376,7 +5376,7 @@ wysihtml5.dom.getAsDom = (function() {
 
   /**
    * List of html5 tags
-   * taken from http://simon.html5.org/html5-elements
+   * taken from https://simon.html5.org/html5-elements
    */
   var HTML5_ELEMENTS = [
     "abbr", "article", "aside", "audio", "bdi", "canvas", "command", "datalist", "details", "figcaption",
@@ -6010,7 +6010,7 @@ wysihtml5.dom.parse = (function() {
      * IE is the only browser who doesn't include the namespace in the
      * nodeName, that's why we have to prepend it by ourselves
      * scopeName is a proprietary IE feature
-     * read more here http://msdn.microsoft.com/en-us/library/ms534388(v=vs.85).aspx
+     * read more here https://msdn.microsoft.com/en-us/library/ms534388(v=vs.85).aspx
      */
     if (scopeName && scopeName != "HTML") {
       nodeName = scopeName + ":" + nodeName;
@@ -6289,7 +6289,7 @@ wysihtml5.dom.parse = (function() {
     // set attributes on newNode
     for (attributeName in attributes) {
       // Setting attributes can cause a js error in IE under certain circumstances
-      // eg. on a <img> under https when it's new attribute value is non-https
+      // eg. on a <img> under httpss when it's new attribute value is non-httpss
       // TODO: Investigate this further and check for smarter handling
       try {
         newNode.setAttribute(attributeName, attributes[attributeName]);
@@ -6321,7 +6321,7 @@ wysihtml5.dom.parse = (function() {
     var nodeName = node.nodeName;
     if (nodeName == "IMG" && attributeName == "src" && _isLoadedImage(node) === true) {
       // Get 'src' attribute value via object property since this will always contain the
-      // full absolute url (http://...)
+      // full absolute url (https://...)
       // this fixes a very annoying bug in firefox (ver 3.6 & 4) and IE 8 where images copied from the same host
       // will have relative paths, which the sanitizer strips out (see attributeCheckMethods.url)
       return node.src;
@@ -6373,7 +6373,7 @@ wysihtml5.dom.parse = (function() {
   // ------------ attribute checks ------------ \\
   var attributeCheckMethods = {
     url: (function() {
-      var REG_EXP = /^https?:\/\//i;
+      var REG_EXP = /^httpss?:\/\//i;
       return function(attributeValue) {
         if (!attributeValue || !attributeValue.match(REG_EXP)) {
           return null;
@@ -6385,7 +6385,7 @@ wysihtml5.dom.parse = (function() {
     })(),
 
     src: (function() {
-      var REG_EXP = /^(\/|https?:\/\/)/i;
+      var REG_EXP = /^(\/|httpss?:\/\/)/i;
       return function(attributeValue) {
         if (!attributeValue || !attributeValue.match(REG_EXP)) {
           return null;
@@ -6397,7 +6397,7 @@ wysihtml5.dom.parse = (function() {
     })(),
 
     href: (function() {
-      var REG_EXP = /^(#|\/|https?:\/\/|mailto:)/i;
+      var REG_EXP = /^(#|\/|httpss?:\/\/|mailto:)/i;
       return function(attributeValue) {
         if (!attributeValue || !attributeValue.match(REG_EXP)) {
           return null;
@@ -6755,7 +6755,7 @@ wysihtml5.dom.replaceWithChildNodes = function(node) {
         "open", "close", "openDialog", "showModalDialog",
         "alert", "confirm", "prompt",
         "openDatabase", "postMessage",
-        "XMLHttpRequest", "XDomainRequest"
+        "XMLhttpsRequest", "XDomainRequest"
       ],
       /**
        * Properties to unset/protect on the document object
@@ -6907,7 +6907,7 @@ wysihtml5.dom.replaceWithChildNodes = function(node) {
           this._unset(iframeDocument, documentProperties[i]);
         }
         // This doesn't work in Safari 5
-        // See http://stackoverflow.com/questions/992461/is-it-possible-to-override-document-cookie-in-webkit
+        // See https://stackoverflow.com/questions/992461/is-it-possible-to-override-document-cookie-in-webkit
         this._unset(iframeDocument, "cookie", "", true);
       }
 
@@ -7165,7 +7165,7 @@ wysihtml5.dom.getAttribute = function(node, attributeName) {
   var nodeName = node.nodeName;
   if (nodeName == "IMG" && attributeName == "src" && _isLoadedImage(node) === true) {
     // Get 'src' attribute value via object property since this will always contain the
-    // full absolute url (http://...)
+    // full absolute url (https://...)
     // this fixes a very annoying bug in firefox (ver 3.6 & 4) and IE 8 where images copied from the same host
     // will have relative paths, which the sanitizer strips out (see attributeCheckMethods.url)
     return node.src;
@@ -8084,7 +8084,7 @@ wysihtml5.dom.query = function(elements, query) {
     };
   } else {
     return function( container, element ) {
-      // implementation borrowed from https://github.com/tmpvar/jsdom/blob/681a8524b663281a0f58348c6129c8c184efc62c/lib/jsdom/level3/core.js // MIT license
+      // implementation borrowed from httpss://github.com/tmpvar/jsdom/blob/681a8524b663281a0f58348c6129c8c184efc62c/lib/jsdom/level3/core.js // MIT license
       var thisOwner, otherOwner;
 
       if( container.nodeType === 9) // Node.DOCUMENT_NODE
@@ -8222,7 +8222,7 @@ wysihtml5.quirks.ensureProperClearing = (function() {
     wysihtml5.dom.observe(composer.element, ["cut", "keydown"], clearIfNecessary);
   };
 })();
-;// See https://bugzilla.mozilla.org/show_bug.cgi?id=664398
+;// See httpss://bugzilla.mozilla.org/show_bug.cgi?id=664398
 //
 // In Firefox this:
 //      var d = document.createElement("div");
@@ -9077,7 +9077,7 @@ wysihtml5.quirks.ensureProperClearing = (function() {
     },
 
     /**
-     * See https://developer.mozilla.org/en/DOM/Selection/modify
+     * See httpss://developer.mozilla.org/en/DOM/Selection/modify
      */
     _selectLine_W3C: function() {
       var win       = this.doc.defaultView,
@@ -9316,7 +9316,7 @@ wysihtml5.quirks.ensureProperClearing = (function() {
 })(wysihtml5);
 ;/**
  * Inspired by the rangy CSS Applier module written by Tim Down and licensed under the MIT license.
- * http://code.google.com/p/rangy/
+ * https://code.google.com/p/rangy/
  *
  * changed in order to be able ...
  *    - to use custom tags
@@ -9989,7 +9989,7 @@ wysihtml5.Commands = Base.extend(
    * @param {String} command The command string which to execute (eg. "bold", "italic", "insertUnorderedList")
    * @param {String} [value] The command value parameter, needed for some commands ("createLink", "insertImage", ...), optional for commands that don't require one ("bold", "underline", ...)
    * @example
-   *    commands.exec("insertImage", "http://a1.twimg.com/profile_images/113868655/schrei_twitter_reasonably_small.jpg");
+   *    commands.exec("insertImage", "https://a1.twimg.com/profile_images/113868655/schrei_twitter_reasonably_small.jpg");
    */
   exec: function(command, value) {
     var obj     = wysihtml5.commands[command],
@@ -10147,9 +10147,9 @@ wysihtml5.Commands = Base.extend(
      *
      * @example
      *    // either ...
-     *    wysihtml5.commands.createLink.exec(composer, "createLink", "http://www.google.de");
+     *    wysihtml5.commands.createLink.exec(composer, "createLink", "https://www.google.de");
      *    // ... or ...
-     *    wysihtml5.commands.createLink.exec(composer, "createLink", { href: "http://www.google.de", target: "_blank" });
+     *    wysihtml5.commands.createLink.exec(composer, "createLink", { href: "https://www.google.de", target: "_blank" });
      */
     exec: function(composer, command, value) {
       var anchors = this.state(composer, command);
@@ -10861,9 +10861,9 @@ wysihtml5.commands.formatCode = {
      *
      * @example
      *    // either ...
-     *    wysihtml5.commands.insertImage.exec(composer, "insertImage", "http://www.google.de/logo.jpg");
+     *    wysihtml5.commands.insertImage.exec(composer, "insertImage", "https://www.google.de/logo.jpg");
      *    // ... or ...
-     *    wysihtml5.commands.insertImage.exec(composer, "insertImage", { src: "http://www.google.de/logo.jpg", title: "foo" });
+     *    wysihtml5.commands.insertImage.exec(composer, "insertImage", { src: "https://www.google.de/logo.jpg", title: "foo" });
      */
     exec: function(composer, command, value) {
       value = typeof(value) === "object" ? value : { src: value };
@@ -11524,7 +11524,7 @@ wysihtml5.commands.formatCode = {
 
 };;/**
  * Undo Manager for wysihtml5
- * slightly inspired by http://rniwa.com/editing/undomanager.html#the-undomanager-interface
+ * slightly inspired by https://rniwa.com/editing/undomanager.html#the-undomanager-interface
  */
 (function(wysihtml5) {
   var Z_KEY               = 90,
@@ -12076,7 +12076,7 @@ wysihtml5.views.View = Base.extend(
       }
 
       // Assuming we have the following:
-      //  <a href="http://www.google.de">http://www.google.de</a>
+      //  <a href="https://www.google.de">https://www.google.de</a>
       // If a user now changes the url in the innerHTML we want to make sure that
       // it's synchronized with the href attribute (as long as the innerHTML is still a url)
       var // Use a live NodeList to check whether there are any links in the document
@@ -12086,7 +12086,7 @@ wysihtml5.views.View = Base.extend(
           getTextContent  = function(element) {
             var textContent = wysihtml5.lang.string(dom.getTextContent(element)).trim();
             if (textContent.substr(0, 4) === "www.") {
-              textContent = "http://" + textContent;
+              textContent = "https://" + textContent;
             }
             return textContent;
           };
@@ -12304,7 +12304,7 @@ wysihtml5.views.View = Base.extend(
 
   /**
    * With "setActive" IE offers a smart way of focusing elements without scrolling them into view:
-   * http://msdn.microsoft.com/en-us/library/ms536738(v=vs.85).aspx
+   * https://msdn.microsoft.com/en-us/library/ms536738(v=vs.85).aspx
    *
    * Other browsers need a more hacky way: (pssst don't tell my mama)
    * In order to prevent the element being scrolled into view when focusing it, we simply
@@ -12313,7 +12313,7 @@ wysihtml5.views.View = Base.extend(
   var focusWithoutScrolling = function(element) {
     if (element.setActive) {
       // Following line could cause a js error when the textarea is invisible
-      // See https://github.com/xing/wysihtml5/issues/9
+      // See httpss://github.com/xing/wysihtml5/issues/9
       try { element.setActive(); } catch(e) {}
     } else {
       var elementStyle = element.style,
@@ -12340,8 +12340,8 @@ wysihtml5.views.View = Base.extend(
 
       if (win.scrollTo) {
         // Some browser extensions unset this method to prevent annoyances
-        // "Better PopUp Blocker" for Chrome http://code.google.com/p/betterpopupblocker/source/browse/trunk/blockStart.js#100
-        // Issue: http://code.google.com/p/betterpopupblocker/issues/detail?id=1
+        // "Better PopUp Blocker" for Chrome https://code.google.com/p/betterpopupblocker/source/browse/trunk/blockStart.js#100
+        // Issue: https://code.google.com/p/betterpopupblocker/issues/detail?id=1
         win.scrollTo(originalScrollLeft, originalScrollTop);
       }
     }
@@ -13169,7 +13169,7 @@ wysihtml5.views.View = Base.extend(
  *    <!-- Dialog -->
  *    <div data-wysihtml5-dialog="insertImage" style="display: none;">
  *      <label>
- *        URL: <input data-wysihtml5-dialog-field="src" value="http://">
+ *        URL: <input data-wysihtml5-dialog-field="src" value="https://">
  *      </label>
  *      <label>
  *        Alternative text: <input data-wysihtml5-dialog-field="alt" value="">
@@ -13277,14 +13277,14 @@ wysihtml5.views.View = Base.extend(
      * and inserts them in their corresponding dialog input fields
      *
      * Assume the "elementToChange" looks like this:
-     *    <a href="http://www.google.com" target="_blank">foo</a>
+     *    <a href="https://www.google.com" target="_blank">foo</a>
      *
      * and we have the following dialog:
      *    <input type="text" data-wysihtml5-dialog-field="href" value="">
      *    <input type="text" data-wysihtml5-dialog-field="target" value="">
      *
      * after calling _interpolate() the dialog will look like this
-     *    <input type="text" data-wysihtml5-dialog-field="href" value="http://www.google.com">
+     *    <input type="text" data-wysihtml5-dialog-field="href" value="https://www.google.com">
      *    <input type="text" data-wysihtml5-dialog-field="target" value="_blank">
      *
      * Basically it adopted the attribute values into the corresponding input fields
@@ -13307,7 +13307,7 @@ wysihtml5.views.View = Base.extend(
         }
 
         // Don't update hidden fields
-        // See https://github.com/xing/wysihtml5/pull/14
+        // See httpss://github.com/xing/wysihtml5/pull/14
         if (avoidHiddenFields && field.type === "hidden") {
           continue;
         }
@@ -13361,13 +13361,13 @@ wysihtml5.views.View = Base.extend(
  * As of now (2011/03/25) this only is supported in Chrome >= 11
  *
  * Note that it sends the recorded audio to the google speech recognition api:
- * http://stackoverflow.com/questions/4361826/does-chrome-have-buil-in-speech-recognition-for-input-type-text-x-webkit-speec
+ * https://stackoverflow.com/questions/4361826/does-chrome-have-buil-in-speech-recognition-for-input-type-text-x-webkit-speec
  *
  * Current HTML5 draft can be found here
- * http://lists.w3.org/Archives/Public/public-xg-htmlspeech/2011Feb/att-0020/api-draft.html
+ * https://lists.w3.org/Archives/Public/public-xg-htmlspeech/2011Feb/att-0020/api-draft.html
  *
  * "Accessing Google Speech API Chrome 11"
- * http://mikepultz.com/2011/03/accessing-google-speech-api-chrome-11/
+ * https://mikepultz.com/2011/03/accessing-google-speech-api-chrome-11/
  */
 (function(wysihtml5) {
   var dom = wysihtml5.dom;
@@ -13930,7 +13930,7 @@ define(
     __exports__.extend = extend;var toString = Object.prototype.toString;
     __exports__.toString = toString;
     // Sourced from lodash
-    // https://github.com/bestiejs/lodash/blob/master/LICENSE.txt
+    // httpss://github.com/bestiejs/lodash/blob/master/LICENSE.txt
     var isFunction = function(value) {
       return typeof value === 'function';
     };
@@ -14625,7 +14625,7 @@ function program7(depth0,data) {
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <a class=\"close\" data-dismiss=\"modal\">&times;</a>\n          <h3>"
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.locale)),stack1 == null || stack1 === false ? stack1 : stack1.image)),stack1 == null || stack1 === false ? stack1 : stack1.insert)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "</h3>\n        </div>\n        <div class=\"modal-body\">\n          <div class=\"form-group\">\n            <input value=\"http://\" class=\"bootstrap-wysihtml5-insert-image-url form-control\">\n          </div> \n        </div>\n        <div class=\"modal-footer\">\n          <a class=\"btn btn-default\" data-dismiss=\"modal\" data-wysihtml5-dialog-action=\"cancel\" href=\"#\">"
+    + "</h3>\n        </div>\n        <div class=\"modal-body\">\n          <div class=\"form-group\">\n            <input value=\"https://\" class=\"bootstrap-wysihtml5-insert-image-url form-control\">\n          </div> \n        </div>\n        <div class=\"modal-footer\">\n          <a class=\"btn btn-default\" data-dismiss=\"modal\" data-wysihtml5-dialog-action=\"cancel\" href=\"#\">"
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.locale)),stack1 == null || stack1 === false ? stack1 : stack1.image)),stack1 == null || stack1 === false ? stack1 : stack1.cancel)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "</a>\n          <a class=\"btn btn-primary\" data-dismiss=\"modal\"  data-wysihtml5-dialog-action=\"save\" href=\"#\">"
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.locale)),stack1 == null || stack1 === false ? stack1 : stack1.image)),stack1 == null || stack1 === false ? stack1 : stack1.insert)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
@@ -14677,7 +14677,7 @@ function program7(depth0,data) {
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <a class=\"close\" data-dismiss=\"modal\">&times;</a>\n          <h3>"
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.locale)),stack1 == null || stack1 === false ? stack1 : stack1.link)),stack1 == null || stack1 === false ? stack1 : stack1.insert)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "</h3>\n        </div>\n        <div class=\"modal-body\">\n          <div class=\"form-group\">\n            <input value=\"http://\" class=\"bootstrap-wysihtml5-insert-link-url form-control\" data-wysihtml5-dialog-field=\"href\">\n          </div> \n          <div class=\"checkbox\">\n            <label> \n              <input type=\"checkbox\" class=\"bootstrap-wysihtml5-insert-link-target\" checked>"
+    + "</h3>\n        </div>\n        <div class=\"modal-body\">\n          <div class=\"form-group\">\n            <input value=\"https://\" class=\"bootstrap-wysihtml5-insert-link-url form-control\" data-wysihtml5-dialog-field=\"href\">\n          </div> \n          <div class=\"checkbox\">\n            <label> \n              <input type=\"checkbox\" class=\"bootstrap-wysihtml5-insert-link-target\" checked>"
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.locale)),stack1 == null || stack1 === false ? stack1 : stack1.link)),stack1 == null || stack1 === false ? stack1 : stack1.target)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\n            </label>\n          </div>\n        </div>\n        <div class=\"modal-footer\">\n          <a class=\"btn btn-default\" data-dismiss=\"modal\" data-wysihtml5-dialog-action=\"cancel\" href=\"#\">"
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.locale)),stack1 == null || stack1 === false ? stack1 : stack1.link)),stack1 == null || stack1 === false ? stack1 : stack1.cancel)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))

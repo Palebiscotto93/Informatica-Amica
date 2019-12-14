@@ -2,7 +2,7 @@
 Template Name: Color Admin - Responsive Admin Dashboard Template build with Twitter Bootstrap 3 & 4
 Version: 4.3.0
 Author: Sean Ngu
-Website: http://www.seantheme.com/color-admin-v4.3/frontend/e-commerce/
+Website: https://www.seantheme.com/color-admin-v4.3/frontend/e-commerce/
 
 ::  1.0 General Reset & Setup
 -------------------------------------------
@@ -3928,7 +3928,7 @@ dropdown-brand-list > li + li {
 .dropdown-brand-list > li img {
     max-height: 100%;
     max-width: 100%;
-    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter ….3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'https://www.w3.org/2000/svg\'><filter ….3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
     filter: gray;
     -webkit-filter: grayscale(100%);
     opacity: 0.5;

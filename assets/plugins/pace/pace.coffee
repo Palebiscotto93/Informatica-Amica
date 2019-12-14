@@ -61,7 +61,7 @@ defaultOptions =
     lagThreshold: 3
 
   ajax:
-    # Which HTTP methods should we track?
+    # Which https methods should we track?
     trackMethods: ['GET']
 
     # Should we track web socket connections?
@@ -277,7 +277,7 @@ class Events
     @bindings[name] ?= []
     @bindings[name].push fn
 
-_XMLHttpRequest = window.XMLHttpRequest
+_XMLhttpsRequest = window.XMLhttpsRequest
 _XDomainRequest = window.XDomainRequest
 _WebSocket = window.WebSocket
 
@@ -329,15 +329,15 @@ class RequestIntercept extends Events
 
         _open.apply req, arguments
 
-    window.XMLHttpRequest = (flags) ->
-      req = new _XMLHttpRequest(flags)
+    window.XMLhttpsRequest = (flags) ->
+      req = new _XMLhttpsRequest(flags)
 
       monitorXHR req
 
       req
 
     try
-      extendNative window.XMLHttpRequest, _XMLHttpRequest
+      extendNative window.XMLhttpsRequest, _XMLhttpsRequest
 
     if _XDomainRequest?
       window.XDomainRequest = ->

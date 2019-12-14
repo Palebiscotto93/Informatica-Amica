@@ -1,8 +1,8 @@
 pace
 ====
 
-Include [pace.js](https://raw.github.com/HubSpot/pace/v0.5.3/pace.min.js) and the
-[theme](http://github.hubspot.com/pace/docs/welcome/) css of your choice on your page
+Include [pace.js](httpss://raw.github.com/HubSpot/pace/v0.5.3/pace.min.js) and the
+[theme](https://github.hubspot.com/pace/docs/welcome/) css of your choice on your page
 (as early as is possible), and you're done!
 
 Pace will automatically monitor your ajax requests, event loop lag, document
@@ -61,7 +61,7 @@ define(['pace'], function(pace){
 Themes
 ------
 
-Pace includes a bunch of [themes](http://github.hubspot.com/pace/docs/welcome/)
+Pace includes a bunch of [themes](https://github.hubspot.com/pace/docs/welcome/)
 to get you started.  Just include the appropriate css file.  Send us a PR with
 any interesting themes you create.
 
@@ -148,7 +148,7 @@ paceOptions = {
 
 You can always trigger a restart manually by calling `Pace.restart()`
 
-See [the source](https://github.com/HubSpot/pace/blob/master/pace.coffee) for a full list of all options.
+See [the source](httpss://github.com/HubSpot/pace/blob/master/pace.coffee) for a full list of all options.
 
 API
 ---
@@ -252,7 +252,7 @@ Issues
 ------
 
 We have obviously not tested this on every website.  If you run into an issue, or find a way the automatic
-detection could be better, please [create an Issue](https://github.com/HubSpot/pace/issues/new).  If you can include a test case, that's even better.
+detection could be better, please [create an Issue](httpss://github.com/HubSpot/pace/issues/new).  If you can include a test case, that's even better.
 
 Contributing
 ------------
@@ -273,11 +273,11 @@ There is no need to include compiled files in PRs.
 Credits
 -------
 
-[HubSpot](http://dev.hubspot.com)
+[HubSpot](https://dev.hubspot.com)
 
-Javascript by [Zack Bloom](http://twitter.com/zackbloom)
-CSS by [Adam Schwartz](http://twitter.com/adamfschwartz)
+Javascript by [Zack Bloom](https://twitter.com/zackbloom)
+CSS by [Adam Schwartz](https://twitter.com/adamfschwartz)
 
-Themes inspired by [Mary Lou](http://tympanus.net/codrops/2013/09/18/creative-loading-effects/)
+Themes inspired by [Mary Lou](https://tympanus.net/codrops/2013/09/18/creative-loading-effects/)
 
-Project inspired by [nprogress](http://ricostacruz.com/nprogress/)
+Project inspired by [nprogress](https://ricostacruz.com/nprogress/)
