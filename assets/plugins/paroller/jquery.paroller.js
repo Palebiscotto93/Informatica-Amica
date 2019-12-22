@@ -1,7 +1,7 @@
 /**
  * jQuery plugin paroller.js v1.4.2
- * httpss://github.com/tgomilar/paroller.js
- * preview: httpss://tgomilar.github.io/paroller/
+ * https://github.com/tgomilar/paroller.js
+ * preview: https://tgomilar.github.io/paroller/
  **/
 (function (factory) {
     'use strict';

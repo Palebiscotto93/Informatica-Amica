@@ -30,10 +30,10 @@ if(!Array.isArray) {
   };
 };/**
  * @license wysihtml5x v0.4.13
- * httpss://github.com/Edicy/wysihtml5
+ * https://github.com/Edicy/wysihtml5
  *
- * Author: Christopher Blum (httpss://github.com/tiff)
- * Secondary author of extended features: Oliver Pulges (httpss://github.com/pulges)
+ * Author: Christopher Blum (https://github.com/tiff)
+ * Secondary author of extended features: Oliver Pulges (https://github.com/pulges)
  *
  * Copyright (C) 2012 XING AG
  * Licensed under the MIT license (MIT)
@@ -2358,7 +2358,7 @@ var wysihtml5 = {
                 /*--------------------------------------------------------------------------------------------------------*/
 
                 // Test for and correct WebKit bug that has the behaviour of compareBoundaryPoints round the wrong way for
-                // constants START_TO_END and END_TO_START: httpss://bugs.webkit.org/show_bug.cgi?id=20738
+                // constants START_TO_END and END_TO_START: https://bugs.webkit.org/show_bug.cgi?id=20738
 
                 range.selectNodeContents(testTextNode);
                 range.setEnd(testTextNode, 3);
@@ -2511,7 +2511,7 @@ var wysihtml5 = {
                 var workingNode = dom.getDocument(containerElement).createElement("span");
 
                 // Workaround for HTML5 Shiv's insane violation of document.createElement(). See Rangy issue 104 and HTML5
-                // Shiv issue 64: httpss://github.com/aFarkas/html5shiv/issues/64
+                // Shiv issue 64: https://github.com/aFarkas/html5shiv/issues/64
                 if (workingNode.parentNode) {
                     workingNode.parentNode.removeChild(workingNode);
                 }
@@ -2954,7 +2954,7 @@ var wysihtml5 = {
                         // console error of "Discontiguous selection is not supported." that cannot be suppressed. There's
                         // nothing we can do about this while retaining the feature test so we have to resort to a browser
                         // sniff. I'm not happy about it. See
-                        // httpss://code.google.com/p/chromium/issues/detail?id=399791
+                        // https://code.google.com/p/chromium/issues/detail?id=399791
                         var chromeMatch = window.navigator.appVersion.match(/Chrome\/(.*?) /);
                         if (chromeMatch && parseInt(chromeMatch[1]) >= 36) {
                             selectionSupportsMultipleRanges = false;
@@ -4402,7 +4402,7 @@ wysihtml5.browser = (function() {
 
     /**
      * IE: URLs starting with:
-     *    www., https://, httpss://, ftp://, gopher://, mailto:, new:, snews:, telnet:, wasis:, file://,
+     *    www., https://, https://, ftp://, gopher://, mailto:, new:, snews:, telnet:, wasis:, file://,
      *    nntp://, newsrc:, ldap://, ldaps://, outlook:, mic:// and url:
      * will automatically be auto-linked when either the user inserts them via copy&paste or presses the
      * space bar when the caret is directly after such an url.
@@ -4480,7 +4480,7 @@ wysihtml5.browser = (function() {
 
     /**
      * As of now (19.04.2011) only supported by Firefox 4 and Chrome
-     * See httpss://developer.mozilla.org/en/DOM/Selection/modify
+     * See https://developer.mozilla.org/en/DOM/Selection/modify
      */
     supportsSelectionModify: function() {
       return "getSelection" in window && "modify" in window.getSelection();
@@ -4510,7 +4510,7 @@ wysihtml5.browser = (function() {
 
     /**
      * IE9 crashes when setting a getter via Object.defineProperty on XMLhttpsRequest or XDomainRequest
-     * See httpss://connect.microsoft.com/ie/feedback/details/650112
+     * See https://connect.microsoft.com/ie/feedback/details/650112
      * or try the POC https://tifftiff.de/ie9_crash/
      */
     crashesWhenDefineProperty: function(property) {
@@ -4865,12 +4865,12 @@ wysihtml5.browser = (function() {
        *    /(\S+\.{1}[^\s\,\.\!]+)/g
        *
        * revision 2:
-       *    /(\b(((httpss?|ftp):\/\/)|(www\.))[-A-Z0-9+&@#\/%?=~_|!:,.;\[\]]*[-A-Z0-9+&@#\/%=~_|])/gim
+       *    /(\b(((https?|ftp):\/\/)|(www\.))[-A-Z0-9+&@#\/%?=~_|!:,.;\[\]]*[-A-Z0-9+&@#\/%=~_|])/gim
        *
        * put this in the beginning if you don't wan't to match within a word
        *    (^|[\>\(\{\[\s\>])
        */
-      URL_REG_EXP           = /((httpss?:\/\/|www\.)[^\s<]{3,})/gi,
+      URL_REG_EXP           = /((https?:\/\/|www\.)[^\s<]{3,})/gi,
       TRAILING_CHAR_REG_EXP = /([^\w\/\-](,?))$/i,
       MAX_DISPLAY_LENGTH    = 100,
       BRACKETS              = { ")": "(", "]": "[", "}": "{" };
@@ -5038,7 +5038,7 @@ wysihtml5.browser = (function() {
     };
   } else if (documentElement.compareDocumentPosition) {
     return function(container, element) {
-      // httpss://developer.mozilla.org/en/DOM/Node.compareDocumentPosition
+      // https://developer.mozilla.org/en/DOM/Node.compareDocumentPosition
       return !!(container.compareDocumentPosition(element) & 16);
     };
   }
@@ -5210,7 +5210,7 @@ wysihtml5.dom.copyAttributes = function(attributesToCopy) {
    * So if an element has "width: 200px; -moz-box-sizing: border-box; border: 1px;" then
    * its computed css width will be 198px
    *
-   * See httpss://bugzilla.mozilla.org/show_bug.cgi?id=520992
+   * See https://bugzilla.mozilla.org/show_bug.cgi?id=520992
    */
   var BOX_SIZING_PROPERTIES = ["-webkit-box-sizing", "-moz-box-sizing", "-ms-box-sizing", "box-sizing"];
 
@@ -6289,7 +6289,7 @@ wysihtml5.dom.parse = (function() {
     // set attributes on newNode
     for (attributeName in attributes) {
       // Setting attributes can cause a js error in IE under certain circumstances
-      // eg. on a <img> under httpss when it's new attribute value is non-httpss
+      // eg. on a <img> under https when it's new attribute value is non-https
       // TODO: Investigate this further and check for smarter handling
       try {
         newNode.setAttribute(attributeName, attributes[attributeName]);
@@ -6373,7 +6373,7 @@ wysihtml5.dom.parse = (function() {
   // ------------ attribute checks ------------ \\
   var attributeCheckMethods = {
     url: (function() {
-      var REG_EXP = /^httpss?:\/\//i;
+      var REG_EXP = /^https?:\/\//i;
       return function(attributeValue) {
         if (!attributeValue || !attributeValue.match(REG_EXP)) {
           return null;
@@ -6385,7 +6385,7 @@ wysihtml5.dom.parse = (function() {
     })(),
 
     src: (function() {
-      var REG_EXP = /^(\/|httpss?:\/\/)/i;
+      var REG_EXP = /^(\/|https?:\/\/)/i;
       return function(attributeValue) {
         if (!attributeValue || !attributeValue.match(REG_EXP)) {
           return null;
@@ -6397,7 +6397,7 @@ wysihtml5.dom.parse = (function() {
     })(),
 
     href: (function() {
-      var REG_EXP = /^(#|\/|httpss?:\/\/|mailto:)/i;
+      var REG_EXP = /^(#|\/|https?:\/\/|mailto:)/i;
       return function(attributeValue) {
         if (!attributeValue || !attributeValue.match(REG_EXP)) {
           return null;
@@ -8084,7 +8084,7 @@ wysihtml5.dom.query = function(elements, query) {
     };
   } else {
     return function( container, element ) {
-      // implementation borrowed from httpss://github.com/tmpvar/jsdom/blob/681a8524b663281a0f58348c6129c8c184efc62c/lib/jsdom/level3/core.js // MIT license
+      // implementation borrowed from https://github.com/tmpvar/jsdom/blob/681a8524b663281a0f58348c6129c8c184efc62c/lib/jsdom/level3/core.js // MIT license
       var thisOwner, otherOwner;
 
       if( container.nodeType === 9) // Node.DOCUMENT_NODE
@@ -8222,7 +8222,7 @@ wysihtml5.quirks.ensureProperClearing = (function() {
     wysihtml5.dom.observe(composer.element, ["cut", "keydown"], clearIfNecessary);
   };
 })();
-;// See httpss://bugzilla.mozilla.org/show_bug.cgi?id=664398
+;// See https://bugzilla.mozilla.org/show_bug.cgi?id=664398
 //
 // In Firefox this:
 //      var d = document.createElement("div");
@@ -9077,7 +9077,7 @@ wysihtml5.quirks.ensureProperClearing = (function() {
     },
 
     /**
-     * See httpss://developer.mozilla.org/en/DOM/Selection/modify
+     * See https://developer.mozilla.org/en/DOM/Selection/modify
      */
     _selectLine_W3C: function() {
       var win       = this.doc.defaultView,
@@ -12313,7 +12313,7 @@ wysihtml5.views.View = Base.extend(
   var focusWithoutScrolling = function(element) {
     if (element.setActive) {
       // Following line could cause a js error when the textarea is invisible
-      // See httpss://github.com/xing/wysihtml5/issues/9
+      // See https://github.com/xing/wysihtml5/issues/9
       try { element.setActive(); } catch(e) {}
     } else {
       var elementStyle = element.style,
@@ -13307,7 +13307,7 @@ wysihtml5.views.View = Base.extend(
         }
 
         // Don't update hidden fields
-        // See httpss://github.com/xing/wysihtml5/pull/14
+        // See https://github.com/xing/wysihtml5/pull/14
         if (avoidHiddenFields && field.type === "hidden") {
           continue;
         }

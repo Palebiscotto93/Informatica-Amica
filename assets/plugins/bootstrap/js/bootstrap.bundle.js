@@ -1,7 +1,7 @@
 /*!
-  * Bootstrap v4.2.1 (httpss://getbootstrap.com/)
-  * Copyright 2011-2018 The Bootstrap Authors (httpss://github.com/twbs/bootstrap/graphs/contributors)
-  * Licensed under MIT (httpss://github.com/twbs/bootstrap/blob/master/LICENSE)
+  * Bootstrap v4.2.1 (https://getbootstrap.com/)
+  * Copyright 2011-2018 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('jquery')) :
@@ -70,7 +70,7 @@
   /**
    * --------------------------------------------------------------------------
    * Bootstrap (v4.2.1): util.js
-   * Licensed under MIT (httpss://github.com/twbs/bootstrap/blob/master/LICENSE)
+   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
   /**
@@ -81,7 +81,7 @@
 
   var TRANSITION_END = 'transitionend';
   var MAX_UID = 1000000;
-  var MILLISECONDS_MULTIPLIER = 1000; // Shoutout AngusCroll (httpss://goo.gl/pxwQGp)
+  var MILLISECONDS_MULTIPLIER = 1000; // Shoutout AngusCroll (https://goo.gl/pxwQGp)
 
   function toType(obj) {
     return {}.toString.call(obj).match(/\s([a-z]+)/i)[1].toLowerCase();
@@ -2707,7 +2707,7 @@
    *
    * The tale of pixel-perfect positioning. It's still not 100% perfect, but as
    * good as it can be within reason.
-   * Discussion here: httpss://github.com/FezVrasta/popper.js/pull/715
+   * Discussion here: https://github.com/FezVrasta/popper.js/pull/715
    *
    * Low DPI screens cause a popper to be blurry if not using full pixels (Safari
    * as well on High DPI screens).
@@ -3561,7 +3561,7 @@
      * ```
      * > **NB**: If you desire to apply offsets to your poppers in a way that may make them overlap
      * > with their reference element, unfortunately, you will have to disable the `flip` modifier.
-     * > You can read more on this at this [issue](httpss://github.com/FezVrasta/popper.js/issues/373).
+     * > You can read more on this at this [issue](https://github.com/FezVrasta/popper.js/issues/373).
      *
      * @memberof modifiers
      * @inner
@@ -4194,10 +4194,10 @@
       if (!this._inNavbar) {
         /**
          * Check for Popper dependency
-         * Popper - httpss://popper.js.org
+         * Popper - https://popper.js.org
          */
         if (typeof Popper === 'undefined') {
-          throw new TypeError('Bootstrap\'s dropdowns require Popper.js (httpss://popper.js.org/)');
+          throw new TypeError('Bootstrap\'s dropdowns require Popper.js (https://popper.js.org/)');
         }
 
         var referenceElement = this._element;
@@ -4212,7 +4212,7 @@
           }
         } // If boundary is not `scrollParent`, then set position to `static`
         // to allow the menu to "escape" the scroll parent's boundaries
-        // httpss://github.com/twbs/bootstrap/issues/24251
+        // https://github.com/twbs/bootstrap/issues/24251
 
 
         if (this._config.boundary !== 'scrollParent') {
@@ -4223,7 +4223,7 @@
       } // If this is a touch-enabled device we add extra
       // empty mouseover listeners to the body's immediate children;
       // only needed because of broken event delegation on iOS
-      // httpss://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
+      // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
 
 
       if ('ontouchstart' in document.documentElement && $(parent).closest(Selector$4.NAVBAR_NAV).length === 0) {
@@ -5255,10 +5255,10 @@
     function Tooltip(element, config) {
       /**
        * Check for Popper dependency
-       * Popper - httpss://popper.js.org
+       * Popper - https://popper.js.org
        */
       if (typeof Popper === 'undefined') {
-        throw new TypeError('Bootstrap\'s tooltips require Popper.js (httpss://popper.js.org/)');
+        throw new TypeError('Bootstrap\'s tooltips require Popper.js (https://popper.js.org/)');
       } // private
 
 
@@ -5419,7 +5419,7 @@
         $(tip).addClass(ClassName$6.SHOW); // If this is a touch-enabled device we add extra
         // empty mouseover listeners to the body's immediate children;
         // only needed because of broken event delegation on iOS
-        // httpss://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
+        // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
 
         if ('ontouchstart' in document.documentElement) {
           $(document.body).children().on('mouseover', null, $.noop);
@@ -6778,7 +6778,7 @@
   /**
    * --------------------------------------------------------------------------
    * Bootstrap (v4.2.1): index.js
-   * Licensed under MIT (httpss://github.com/twbs/bootstrap/blob/master/LICENSE)
+   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
 

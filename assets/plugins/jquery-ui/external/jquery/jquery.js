@@ -1251,7 +1251,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 			}
 
 			// Support: Safari 8+, iOS 8+
-			// httpss://bugs.webkit.org/show_bug.cgi?id=136851
+			// https://bugs.webkit.org/show_bug.cgi?id=136851
 			// In-page `selector#id sibing-combinator selector` fails
 			if ( !div.querySelectorAll( "a#" + expando + "+*" ).length ) {
 				rbuggyQSA.push(".#.+[+~]");
@@ -1529,7 +1529,7 @@ Sizzle.uniqueSort = function( results ) {
 	}
 
 	// Clear input after sorting to release objects
-	// See httpss://github.com/jquery/sizzle/pull/225
+	// See https://github.com/jquery/sizzle/pull/225
 	sortInput = null;
 
 	return results;
@@ -4739,7 +4739,7 @@ function buildFragment( elems, context, scripts, selection, ignored ) {
 
 		if ( !( support[ i ] = eventName in window ) ) {
 
-			// Beware of CSP restrictions (httpss://developer.mozilla.org/en/Security/CSP)
+			// Beware of CSP restrictions (https://developer.mozilla.org/en/Security/CSP)
 			div.setAttribute( eventName, "t" );
 			support[ i ] = div.attributes[ eventName ].expando === false;
 		}
@@ -5615,7 +5615,7 @@ jQuery.Event.prototype = {
 //
 // Support: Safari 7 only
 // Safari sends mouseenter too often; see:
-// httpss://code.google.com/p/chromium/issues/detail?id=470258
+// https://code.google.com/p/chromium/issues/detail?id=470258
 // for the description of the bug (it existed in older Chrome versions as well).
 jQuery.each( {
 	mouseenter: "mouseover",
@@ -5771,12 +5771,12 @@ if ( !support.change ) {
 
 // Support: Firefox
 // Firefox doesn't have focus(in | out) events
-// Related ticket - httpss://bugzilla.mozilla.org/show_bug.cgi?id=687787
+// Related ticket - https://bugzilla.mozilla.org/show_bug.cgi?id=687787
 //
 // Support: Chrome, Safari
 // focus(in | out) events fire after focus & blur events,
 // which is spec violation - https://www.w3.org/TR/DOM-Level-3-Events/#events-focusevent-event-order
-// Related ticket - httpss://code.google.com/p/chromium/issues/detail?id=449857
+// Related ticket - https://code.google.com/p/chromium/issues/detail?id=449857
 if ( !support.focusin ) {
 	jQuery.each( { focus: "focusin", blur: "focusout" }, function( orig, fix ) {
 
@@ -5875,7 +5875,7 @@ var rinlinejQuery = / jQuery\d+="(?:null|\d+)"/g,
 
 	// Support: IE 10-11, Edge 10240+
 	// In IE/Edge using regex groups here causes severe slowdowns.
-	// See httpss://connect.microsoft.com/IE/feedback/details/1736512/
+	// See https://connect.microsoft.com/IE/feedback/details/1736512/
 	rnoInnerhtml = /<script|<style|<link/i,
 
 	// checked="checked" or checked
@@ -6229,7 +6229,7 @@ jQuery.extend( {
 
 						// Webkit & Blink performance suffers when deleting properties
 						// from DOM nodes, so set to undefined instead
-						// httpss://code.google.com/p/chromium/issues/detail?id=378607
+						// https://code.google.com/p/chromium/issues/detail?id=378607
 						} else {
 							elem[ internalKey ] = undefined;
 						}
@@ -6844,7 +6844,7 @@ var
 	// swappable if display is none or starts with table except
 	// "table", "table-cell", or "table-caption"
 	// see here for display values:
-	// httpss://developer.mozilla.org/en-US/docs/CSS/display
+	// https://developer.mozilla.org/en-US/docs/CSS/display
 	rdisplayswap = /^(none|table(?!-c[ea]).+)/,
 	rnumsplit = new RegExp( "^(" + pnum + ")(.*)$", "i" ),
 
@@ -6998,8 +6998,8 @@ function getWidthOrHeight( elem, name, extra ) {
 			jQuery.css( elem, "boxSizing", false, styles ) === "border-box";
 
 	// some non-html elements return undefined for offsetWidth, so check for null/undefined
-	// svg - httpss://bugzilla.mozilla.org/show_bug.cgi?id=649285
-	// MathML - httpss://bugzilla.mozilla.org/show_bug.cgi?id=491668
+	// svg - https://bugzilla.mozilla.org/show_bug.cgi?id=649285
+	// MathML - https://bugzilla.mozilla.org/show_bug.cgi?id=491668
 	if ( val <= 0 || val == null ) {
 
 		// Fall back to computed then uncomputed css if necessary
@@ -8268,7 +8268,7 @@ jQuery.extend( {
 					// Support: IE10-11+
 					// option.text throws exceptions (#14686, #14858)
 					// Strip and collapse whitespace
-					// httpss://html.spec.whatwg.org/#strip-and-collapse-whitespace
+					// https://html.spec.whatwg.org/#strip-and-collapse-whitespace
 					jQuery.trim( jQuery.text( elem ) ).replace( rspaces, " " );
 			}
 		},
@@ -10175,7 +10175,7 @@ var xhrId = 0,
 
 // Support: IE<10
 // Open requests must be manually aborted on unload (#5280)
-// See httpss://support.microsoft.com/kb/2856746 for more info
+// See https://support.microsoft.com/kb/2856746 for more info
 if ( window.attachEvent ) {
 	window.attachEvent( "onunload", function() {
 		for ( var key in xhrCallbacks ) {
@@ -10857,7 +10857,7 @@ jQuery.each( { scrollLeft: "pageXOffset", scrollTop: "pageYOffset" }, function( 
 
 // Support: Safari<7-8+, Chrome<37-44+
 // Add the top/left cssHooks using jQuery.fn.position
-// Webkit bug: httpss://bugs.webkit.org/show_bug.cgi?id=29084
+// Webkit bug: https://bugs.webkit.org/show_bug.cgi?id=29084
 // getComputedStyle returns percent when specified for top/left/bottom/right
 // rather than make the css module depend on the offset module, we just check for it here
 jQuery.each( [ "top", "left" ], function( i, prop ) {
@@ -10893,7 +10893,7 @@ jQuery.each( { Height: "height", Width: "width" }, function( name, type ) {
 
 					// As of 5/8/2012 this will yield incorrect results for Mobile Safari, but there
 					// isn't a whole lot we can do. See pull request at this URL for discussion:
-					// httpss://github.com/jquery/jquery/pull/764
+					// https://github.com/jquery/jquery/pull/764
 					return elem.document.documentElement[ "client" + name ];
 				}
 
@@ -10967,7 +10967,7 @@ jQuery.fn.andSelf = jQuery.fn.addBack;
 // Note that for maximum portability, libraries that are not jQuery should
 // declare themselves as anonymous modules, and avoid setting a global if an
 // AMD loader is present. jQuery is a special case. For more information, see
-// httpss://github.com/jrburke/requirejs/wiki/Updating-existing-libraries#wiki-anon
+// https://github.com/jrburke/requirejs/wiki/Updating-existing-libraries#wiki-anon
 
 if ( typeof define === "function" && define.amd ) {
 	define( "jquery", [], function() {
@@ -10998,7 +10998,7 @@ jQuery.noConflict = function( deep ) {
 };
 
 // Expose jQuery and $ identifiers, even in
-// AMD (#7102#comment:10, httpss://github.com/jquery/jquery/pull/557)
+// AMD (#7102#comment:10, https://github.com/jquery/jquery/pull/557)
 // and CommonJS for browser emulators (#13566)
 if ( !noGlobal ) {
 	window.jQuery = window.$ = jQuery;

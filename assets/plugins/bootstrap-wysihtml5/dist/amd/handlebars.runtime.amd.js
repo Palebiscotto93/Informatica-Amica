@@ -74,7 +74,7 @@ define(
     __exports__.extend = extend;var toString = Object.prototype.toString;
     __exports__.toString = toString;
     // Sourced from lodash
-    // httpss://github.com/bestiejs/lodash/blob/master/LICENSE.txt
+    // https://github.com/bestiejs/lodash/blob/master/LICENSE.txt
     var isFunction = function(value) {
       return typeof value === 'function';
     };

@@ -1329,7 +1329,7 @@ $.effects = {
 
 /*!
  * jQuery Color Animations v2.1.2
- * httpss://github.com/jquery/jquery-color
+ * https://github.com/jquery/jquery-color
  *
  * Copyright 2014 jQuery Foundation and other contributors
  * Released under the MIT license.
@@ -1758,7 +1758,7 @@ color.fn = jQuery.extend( color.prototype, {
 color.fn.parse.prototype = color.fn;
 
 // Hsla conversions adapted from:
-// httpss://code.google.com/p/maashaack/source/browse/packages/graphics/trunk/src/graphics/colors/HUE2RGB.as?r=5021
+// https://code.google.com/p/maashaack/source/browse/packages/graphics/trunk/src/graphics/colors/HUE2RGB.as?r=5021
 
 function hue2rgb( p, q, h ) {
 	h = ( h + 1 ) % 1;
@@ -2292,7 +2292,7 @@ if ( $.uiBackCompat !== false ) {
 
 			// Support: Firefox
 			// Firefox incorrectly exposes anonymous content
-			// httpss://bugzilla.mozilla.org/show_bug.cgi?id=561664
+			// https://bugzilla.mozilla.org/show_bug.cgi?id=561664
 			try {
 				active.id;
 			} catch ( e ) {
@@ -2479,7 +2479,7 @@ $.extend( $.effects, {
 
 		// Lock in margins first to account for form elements, which
 		// will change margin if you explicitly set height
-		// see: https://jsfiddle.net/JZSMt/3/ httpss://bugs.webkit.org/show_bug.cgi?id=107380
+		// see: https://jsfiddle.net/JZSMt/3/ https://bugs.webkit.org/show_bug.cgi?id=107380
 		// Support: Safari
 		element.css( {
 			marginTop: element.css( "marginTop" ),
@@ -6178,7 +6178,7 @@ $.widget( "ui.autocomplete", {
 	// Support: Chrome <=50
 	// We should be able to just use this.element.prop( "isContentEditable" )
 	// but hidden elements always report false in Chrome.
-	// httpss://code.google.com/p/chromium/issues/detail?id=313082
+	// https://code.google.com/p/chromium/issues/detail?id=313082
 	_isContentEditable: function( element ) {
 		if ( !element.length ) {
 			return false;
@@ -12143,7 +12143,7 @@ $.widget( "ui.dialog", {
 
 			// Hiding a focused element doesn't trigger blur in WebKit
 			// so in case we have nothing to focus on, explicitly blur the active element
-			// httpss://bugs.webkit.org/show_bug.cgi?id=47182
+			// https://bugs.webkit.org/show_bug.cgi?id=47182
 			$.ui.safeBlur( $.ui.safeActiveElement( this.document[ 0 ] ) );
 		}
 

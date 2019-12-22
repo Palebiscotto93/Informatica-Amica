@@ -1,7 +1,7 @@
 pace
 ====
 
-Include [pace.js](httpss://raw.github.com/HubSpot/pace/v0.5.3/pace.min.js) and the
+Include [pace.js](https://raw.github.com/HubSpot/pace/v0.5.3/pace.min.js) and the
 [theme](https://github.hubspot.com/pace/docs/welcome/) css of your choice on your page
 (as early as is possible), and you're done!
 
@@ -148,7 +148,7 @@ paceOptions = {
 
 You can always trigger a restart manually by calling `Pace.restart()`
 
-See [the source](httpss://github.com/HubSpot/pace/blob/master/pace.coffee) for a full list of all options.
+See [the source](https://github.com/HubSpot/pace/blob/master/pace.coffee) for a full list of all options.
 
 API
 ---
@@ -252,7 +252,7 @@ Issues
 ------
 
 We have obviously not tested this on every website.  If you run into an issue, or find a way the automatic
-detection could be better, please [create an Issue](httpss://github.com/HubSpot/pace/issues/new).  If you can include a test case, that's even better.
+detection could be better, please [create an Issue](https://github.com/HubSpot/pace/issues/new).  If you can include a test case, that's even better.
 
 Contributing
 ------------

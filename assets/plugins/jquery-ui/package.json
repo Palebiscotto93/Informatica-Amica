@@ -6,7 +6,7 @@
 	"homepage": "https://jqueryui.com",
 	"author": {
 		"name": "jQuery Foundation and other contributors",
-		"url": "httpss://github.com/jquery/jquery-ui/blob/1.12.1/AUTHORS.txt"
+		"url": "https://github.com/jquery/jquery-ui/blob/1.12.1/AUTHORS.txt"
 	},
 	"main": "ui/widget.js",
 	"maintainers": [
@@ -38,14 +38,14 @@
 		{
 			"name": "Alex Schmitz",
 			"email": "arschmitz@gmail.com",
-			"url": "httpss://github.com/arschmitz"
+			"url": "https://github.com/arschmitz"
 		}
 	],
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/jquery/jquery-ui.git"
 	},
-	"bugs": "httpss://bugs.jqueryui.com/",
+	"bugs": "https://bugs.jqueryui.com/",
 	"license": "MIT",
 	"scripts": {
 		"test": "grunt"
