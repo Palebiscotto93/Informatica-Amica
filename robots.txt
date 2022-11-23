@@ -1,5 +1,8 @@
-User-agent: *
-Disallow: /
+User-agent: Googlebot
+Disallow: /nogooglebot/
 
-Sitemap: https://informaticaamicagenova.it/sitemap.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://informaticaamicagenova.it/sitemap.xml
 
